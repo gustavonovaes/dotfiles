@@ -4,7 +4,7 @@
 sudo rmmod pcspk
 
 # Install essential apps
-sudo pacman -S git pacaur zsh neofetch flameshot
+sudo pacman -S git pacaur zsh neofetch flameshot kalu
 
 # Install i3 needed apps
 sudo pacman -S i3 i3-gaps dmenu rxvt-unicode compton rofi feh ranger w3m xautolock --no-confirm
@@ -42,6 +42,7 @@ ranger --copy-config=all
 # Making directories
 mkdir -p ~/.local/bin
 
+
 ## Install User Programs
 
 # usql
@@ -50,3 +51,6 @@ mv usql ~/.local/bin/
 
 # VSCode
 pacaur -S --silent --noconfirm visual-studio-code-bin
+
+# Deluge
+sudo pacman -S  --noconfirm deluge
