@@ -70,7 +70,7 @@ bindsym $super+Shift+r restart
 bindsym $alt+l exec betterlockscreen -l
 
 # exit i3 (logs you out of your X session)
-bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'i3 Session Mneu' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logoff' 'i3-msg exit'"
 
 # kill focused window
 bindsym F4 kill
@@ -200,5 +200,8 @@ exec --no-startup-id flameshot
 # set keyboard layout
 exec --no-startup-id setxkbmap -layout br
 
+# kalu
+exec --no-startup-id kalu
+
 # xautolock 
-exec --no-startup-id xautolock -time 5 -locker "betterlockscreen -l"
+exec --no-startup-id xautolock -time 1 -locker "betterlockscreen -l"
