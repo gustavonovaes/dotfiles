@@ -2,7 +2,7 @@
 !          general          !
 !---------------------------!
 
-Xcursor.size: 36
+Xcursor.size: 24
 
 ! special
 *.foreground: #d8fbff
@@ -44,7 +44,7 @@ Xcursor.size: 36
 !        urxvt          !
 !-----------------------!
 
-URxvt.background:             [90]#010010
+URxvt.background:             [80]#010010
 ! blurRadios needs URxvt.transparency
 ! URxvt.blurRadius:             10
 URxvt.cursorColor:            #d8fbff
@@ -83,3 +83,16 @@ URxvt.keysym.M-C-v: clipboard:paste_escaped
 URxvt.keysym.M-Escape: keyboard-select:activate
 URxvt.keysym.C-Escape: keyboard-select:activate
 URxvt.keysym.M-u: url-select:select_next
+
+!-------------------!
+!        rofi       !
+!-------------------!
+rofi.separator-style:   none
+rofi.hide-scrollbar:    true
+rofi.font:              Open Sans 18
+rofi.color-enabled:     true
+!rofi.color-window:      argb:ee2f343f, argb:ee2f343f, argb:ee2f343f
+rofi.color-window:      argb:ee010010, argb:ee010010, argb:ee010010
+rofi.color-normal:      argb:002f343f, #d8dee8, argb:002f343f, argb:002f343f, #43a5d5
+rofi.color-active:      #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
+rofi.color-urgent:      #2f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b
