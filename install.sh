@@ -9,6 +9,9 @@ sudo pacman -S git pacaur zsh neofetch flameshot
 # Install i3 needed apps
 sudo pacman -S i3 i3-gaps dmenu rxvt-unicode compton rofi feh ranger w3m xautolock --no-confirm
 
+# Install themes of icon, cursor and gtk
+sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance
+
 # Install alternative to i3lock
 pacaur -S betterlockscreen --noconfirm
 
@@ -17,7 +20,7 @@ sudo pacman -S curl
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install fonts
-pacman -S otf-font-awesome --noconfirm
+pacman -S otf-font-awesome ttf-opensans --noconfirm
 pacaur -S ttf-iosevka --silent --noconfirm
 fc-cache -f
 
