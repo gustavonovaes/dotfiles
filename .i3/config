@@ -131,7 +131,9 @@ bindsym $super+r exec $term -e ranger
 bindsym $super+Return exec $term
 
 # start rofi (a program launcher)
-bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun"
+
+bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun -display-combi '>'"
+#bindsym $alt+F2 exec "rofi -show-icons -modi combi -show run -combi-modi run,drun"
 
 # start flameshot
 bindsym Shift+Print exec --no-startup-id flameshot gui
@@ -193,9 +195,6 @@ exec --no-startup-id compton -f
 
 # load Xxesources
 exec --no-startup-id xrdb ~/.Xresources
-
-# flameshot print screen
-exec --no-startup-id flameshot
 
 # set keyboard layout
 exec --no-startup-id setxkbmap -layout br
