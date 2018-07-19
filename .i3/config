@@ -132,7 +132,7 @@ bindsym $super+Return exec $term
 
 # start rofi (a program launcher)
 
-bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi run,drun -display-combi '>'"
+bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi drun -display-combi '>'"
 #bindsym $alt+F2 exec "rofi -show-icons -modi combi -show run -combi-modi run,drun"
 
 # start flameshot
@@ -204,3 +204,14 @@ exec --no-startup-id kalu
 
 # xautolock 
 exec --no-startup-id xautolock -time 1 -locker "betterlockscreen -l"
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec ([ "$(playerctl status)" = "Playing" ] && playerctl pause) || playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous   
