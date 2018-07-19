@@ -1,28 +1,27 @@
-#!/bin/sh
+#!/bin/bash
 
-# Disable beep
-sudo rmmod pcspk
+# set -e
 
 # Install essential apps
-sudo pacman -S git pacaur zsh neofetch flameshot kalu
+sudo pacman -S git pacaur zsh neofetch flameshot --noconfirm
+pacaur -S kalu --noconfirm
 
 # Install i3 needed apps
-sudo pacman -S i3 i3-gaps dmenu rxvt-unicode compton rofi feh ranger w3m xautolock --no-confirm
+sudo pacman -S i3 w3m rxvt-unicode compton rofi feh ranger xautolock playerctl
 
 # Install themes of icon, cursor and gtk
-sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance
+sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance --noconfirm 
 
 # Install alternative to i3lock
 pacaur -S betterlockscreen --noconfirm
 
 # Install Oh-My-Zsh
-sudo pacman -S curl
+sudo pacman -S curl --noconfirm
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install fonts
-pacman -S otf-font-awesome ttf-opensans --noconfirm
-pacaur -S ttf-iosevka --silent --noconfirm
-fc-cache -f
+sudo pacman -S otf-font-awesome ttf-opensans --noconfirm
+pacaur -S ttf-iosevka --noconfirn
 
 # Copy setting files
 cp -r .i3 ~/
@@ -34,7 +33,7 @@ cp .Xresources ~/
 xrdb ~/.Xresources
 
 # Generate lockscreen backgorund
-betterlockscreen -u $HOME/.i3/background.jpg -r 1920x1080 -b
+betterlockscreen -u $HOME/.i3/background.jpg -r 1920x1080
 
 # Setup ranger file manager
 ranger --copy-config=all
@@ -50,7 +49,7 @@ curl -Ls https://github.com/xo/usql/releases/download/v0.7.0/usql-0.7.0-linux-am
 mv usql ~/.local/bin/
 
 # VSCode
-pacaur -S --silent --noconfirm visual-studio-code-bin
+pacaur -S visual-studio-code-bin --noconfirm
 
 # Deluge
-sudo pacman -S  --noconfirm deluge
+pacaur -S deluge --noconfirm
