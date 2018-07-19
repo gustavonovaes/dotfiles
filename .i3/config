@@ -48,7 +48,7 @@ floating_modifier $super
 font pango:iosevka 12
 
 # i3-gaps
-gaps inner 15
+gaps inner 30
 gaps outer 0
 
 # Set the wallpaper with feh
@@ -229,3 +229,9 @@ exec --no-startup-id kalu
 
 # xautolock 
 exec --no-startup-id xautolock -time 5 -locker "betterlockscreen -l"
+
+# Turn on numlock
+exec --no-startup-id numlockx on
+
+# Show neofetch
+exec --no-startup-id RUN_NEOFETCH=1 urxvt
