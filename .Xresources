@@ -45,24 +45,20 @@ Xcursor.size: 24
 !-----------------------!
 
 URxvt.background:             [80]#010010
-! blurRadios needs URxvt.transparency
-! URxvt.blurRadius:             10
 URxvt.cursorColor:            #d8fbff
 URxvt.depth:                  32
-URxvt.fadeColor:              color2
+URxvt.fadeColor:              #04eca3
 URxvt.fading:                 25
 URxvt.font:                   xft:iosevka:size=14
 URxvt.hightlightColor:        #3b758c
 URxvt.hightlightTextColor:    #43a5d5
 URxvt.internalBorder:         30
-! URxvt.letterSpace:            -1
 URxvt.matcher.button:         1
-URxvt.perl-ext-common:        default,matcher,vtwhell
 URxvt.pointerColorBackground: color15
 URxvt.pointerColorForeground: color14
 URxvt.scrollBar:              false
 URxvt.urgentOnBell:           false
-!URxvt.transparent:           true
+URxvt.perl-ext-common:        default,clipboard,url-select,keyboard-select,matcher
 URxvt.urlLauncher:            xdg-open
 URxvt.urlButton:              1
 URxvt.underlineURLs:          True
@@ -72,17 +68,21 @@ URxvt.inputMethod:            ibus
 URxvt.preeditType:            OverTheSpot
 URxvt.iso14755:               false
 URxvt.iso14755_52:            false
+URxvt.url-select.launcher:    xdg-open
+URxvt.url-select.underline:   true
 
 ! Keybindings
-URxvt.keysym.Mod1-c: clipboard:copy
-URxvt.keysym.Mod1-v: clipboard:paste
-URxvt.keysym.Mod4-C-v: clipboard:paste_escaped
-URxvt.keysym.M-c: clipboard:copy
-URxvt.keysym.M-v: clipboard:paste
-URxvt.keysym.M-C-v: clipboard:paste_escaped
-URxvt.keysym.M-Escape: keyboard-select:activate
-URxvt.keysym.C-Escape: keyboard-select:activate
-URxvt.keysym.M-u: url-select:select_next
+URxvt.keysym.M-u:             perl:url-select:select_next
+!URxvt.keysym.M-Escape:        perl:keyboard-select:activate
+!URxvt.keysym.M-s:             perl:keyboard-select:search
+URxvt.keysym.Mod1-c:          clipboard:copy
+URxvt.keysym.Mod1-v:          clipboard:paste
+URxvt.keysym.Mod4-C-v:        clipboard:paste_escaped
+URxvt.keysym.M-c:             clipboard:copy
+URxvt.keysym.M-v:             clipboard:paste
+URxvt.keysym.M-C-v:           clipboard:paste_escaped
+URxvt.keysym.M-Escape:        keyboard-select:activate
+URxvt.keysym.C-Escape:        keyboard-select:activate
 
 !-------------------!
 !        rofi       !
