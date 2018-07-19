@@ -21,6 +21,7 @@ set $ws10 "10"
 # terminal
 set $term --no-startup-id urxvt
 
+
 ## 
 # Config
 ## 
@@ -55,6 +56,7 @@ exec_always feh --bg-scale ~/.i3/background.jpg
 
 # remove window borders
 for_window [class="^.*"] border pixel 0
+
 
 ## 
 # Binds
@@ -120,6 +122,31 @@ bindsym $super+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $super+minus scratchpad show
 
+# switch to workspace
+bindsym $super+1 workspace $ws1
+bindsym $super+2 workspace $ws2
+bindsym $super+3 workspace $ws3
+bindsym $super+4 workspace $ws4
+bindsym $super+5 workspace $ws5
+bindsym $super+6 workspace $ws6
+bindsym $super+7 workspace $ws7
+bindsym $super+8 workspace $ws8
+bindsym $super+9 workspace $ws9
+bindsym $super+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $super+Shift+1 move container to workspace $ws1
+bindsym $super+Shift+2 move container to workspace $ws2
+bindsym $super+Shift+3 move container to workspace $ws3
+bindsym $super+Shift+4 move container to workspace $ws4
+bindsym $super+Shift+5 move container to workspace $ws5
+bindsym $super+Shift+6 move container to workspace $ws6
+bindsym $super+Shift+7 move container to workspace $ws7
+bindsym $super+Shift+8 move container to workspace $ws8
+bindsym $super+Shift+9 move container to workspace $ws9
+bindsym $super+Shift+0 move container to workspace $ws10
+
+
 ## 
 # Binds Exec
 ##
@@ -131,24 +158,22 @@ bindsym $super+r exec $term -e ranger
 bindsym $super+Return exec $term
 
 # start rofi (a program launcher)
-
 bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi drun -display-combi '>'"
-#bindsym $alt+F2 exec "rofi -show-icons -modi combi -show run -combi-modi run,drun"
 
 # start flameshot
 bindsym Shift+Print exec --no-startup-id flameshot gui
 
-# switch to workspace
-bindsym $super+1 workspace $ws1
-bindsym $super+2 workspace $ws2
-bindsym $super+3 workspace $ws3
-bindsym $super+4 workspace $ws4
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-# move focused container to workspace
-bindsym $super+Shift+1 move container to workspace $ws1
-bindsym $super+Shift+2 move container to workspace $ws2
-bindsym $super+Shift+3 move container to workspace $ws3
-bindsym $super+Shift+4 move container to workspace $ws4
+# Media player controls
+bindsym XF86AudioPlay exec ([ "$(playerctl status)" = "Playing" ] && playerctl pause) || playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 
 ##
 # Colors
@@ -160,7 +185,6 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-# window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
@@ -186,6 +210,7 @@ bar {
 	}
 }
 
+
 ## 
 # Exec
 ##
@@ -203,15 +228,4 @@ exec --no-startup-id setxkbmap -layout br
 exec --no-startup-id kalu
 
 # xautolock 
-exec --no-startup-id xautolock -time 1 -locker "betterlockscreen -l"
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Media player controls
-bindsym XF86AudioPlay exec ([ "$(playerctl status)" = "Playing" ] && playerctl pause) || playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous   
+exec --no-startup-id xautolock -time 5 -locker "betterlockscreen -l"
