@@ -239,10 +239,10 @@ exec --no-startup-id xautolock -time 5 -locker "betterlockscreen -l"
 # Turn on numlock
 exec --no-startup-id numlockx on
 
-# Show neofetch
-exec --no-startup-id RUN_NEOFETCH=1 urxvt
-
 # Disable beep
 exec --no-startup-id xset b off
+
+# Show neofetch
+exec --no-startup-id RUN_NEOFETCH=1 urxvt
 
 for_window [class="Yad"] floating enable
