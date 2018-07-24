@@ -56,3 +56,6 @@ pacaur -S visual-studio-code-bin --noconfirm --needed --noedit
 
 # Deluge
 pacaur -S deluge --noconfirm --needed --noedit
+
+# Set ranger as default directory manager
+xdg-mime default ranger.desktop inode/directory
