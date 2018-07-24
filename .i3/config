@@ -244,3 +244,5 @@ exec --no-startup-id RUN_NEOFETCH=1 urxvt
 
 # Disable beep
 exec --no-startup-id xset b off
+
+for_window [class="Yad"] floating enable

@@ -7,7 +7,7 @@ sudo pacman -S git pacaur zsh neofetch flameshot --noconfirm
 pacaur -S kalu --noconfirm
 
 # Install i3 needed apps
-sudo pacman -S i3 w3m rxvt-unicode compton rofi feh ranger xautolock playerctl numlockx --noconfirm
+sudo pacman -S i3 w3m rxvt-unicode compton rofi feh ranger xautolock playerctl numlockx yad xdotools --noconfirm
 
 # Install themes of icon, cursor and gtk
 sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance --noconfirm 
