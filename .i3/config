@@ -75,7 +75,7 @@ bindsym $alt+l exec betterlockscreen -l
 bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'i3 Session Mneu' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logoff' 'i3-msg exit'"
 
 # kill focused window
-bindsym F4 kill
+bindsym $super+F4 kill
 
 # change focus
 bindsym $super+h focus left
@@ -164,10 +164,16 @@ bindsym $super+r exec $term -e ranger
 bindsym $super+Return exec $term
 
 # start rofi (a program launcher)
-bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi drun -display-combi '>'"
+bindsym $alt+F2 exec "rofi -show-icons -modi combi -show combi -combi-modi drun -display-combi ''"
 
 # start flameshot
 bindsym Shift+Print exec --no-startup-id flameshot gui
+
+# start google chrome
+bindsym $super+c exec google-chrome-stable
+
+# start spotify
+bindsym $super+s exec spotify
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
