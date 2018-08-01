@@ -11,7 +11,7 @@ export ZSH=/home/gn/.oh-my-zsh
 ZSH_THEME="simple"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -28,12 +28,6 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  gitfast
-  git-flow-avh
-  archlinux
-  npm
-  docker
-  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -66,5 +60,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias gc="git commit"
+alias gpl="git pull"
+alias gps="git push"
+alias dc="docker-compose"
 
 [ "$RUN_NEOFETCH" -eq 1 ] && neofetch
