@@ -51,8 +51,10 @@ mkdir -p ~/.local/bin
 ## Install User Programs
 
 # usql
-curl -Ls https://github.com/xo/usql/releases/download/v0.7.0/usql-0.7.0-linux-amd64.tar.bz2 | tar jvx
-mv usql ~/.local/bin/
+if [ ! -f "$HOME/.local/bin/usql" ]; then 
+    curl -Ls https://github.com/xo/usql/releases/download/v0.7.0/usql-0.7.0-linux-amd64.tar.bz2 | tar jvx
+    mv usql ~/.local/bin/
+fi
 
 # VSCode
 pacaur -S visual-studio-code-bin --noconfirm --needed --noedit
