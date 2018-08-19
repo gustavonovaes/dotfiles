@@ -7,7 +7,7 @@ sudo pacman -S git pacaur zsh neofetch flameshot calc --noconfirm --needed
 pacaur -S kalu --noconfirm --needed --noedit
 
 # Install i3 needed apps
-sudo pacman -S i3 w3m rxvt-unicode compton rofi feh ranger xautolock playerctl numlockx yad xdotool --noconfirm --needed
+sudo pacman -S i3 w3m rxvt-unicode compton rofi feh thunar thunar-archive-plugin thunar-media-tags-plugin xautolock playerctl numlockx yad xdotool --noconfirm --needed
 
 # Install themes of icon, cursor and gtk
 sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance --noconfirm  --needed
@@ -42,7 +42,7 @@ betterlockscreen -u $HOME/.i3/background.jpg -r 1920x1080
 ranger --copy-config=all
 
 # Set ranger as default directory manager
-xdg-mime default ranger.desktop inode/directory
+xdg-mime default Thunar.desktop inode/directory
 
 # Making directories
 mkdir -p ~/.local/bin
