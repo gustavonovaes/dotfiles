@@ -4,10 +4,9 @@
 
 # Install essential apps
 sudo pacman -S git pacaur zsh neofetch flameshot calc --noconfirm --needed
-pacaur -S kalu --noconfirm --needed --noedit
 
 # Install i3 needed apps
-sudo pacman -S i3 w3m rxvt-unicode compton rofi feh thunar thunar-archive-plugin thunar-media-tags-plugin xautolock playerctl numlockx yad xdotool --noconfirm --needed
+sudo pacman -S i3 w3m rxvt-unicode compton rofi feh thunar thunar-volman thunar-archive-plugin thunar-media-tags-plugin xautolock playerctl numlockx yad xdotool --noconfirm --needed
 
 # Install themes of icon, cursor and gtk
 sudo pacman -S deepin-icon-theme xcursor-simpleandsoft arc-gtk-theme lxappearance --noconfirm  --needed
@@ -38,23 +37,14 @@ xrdb ~/.Xresources
 # Generate lockscreen backgorund
 betterlockscreen -u $HOME/.i3/background.jpg -r 1920x1080
 
-# Setup ranger file manager
-ranger --copy-config=all
-
-# Set ranger as default directory manager
+# Set Thunar as default directory manager
 xdg-mime default Thunar.desktop inode/directory
-
-# Making directories
-mkdir -p ~/.local/bin
 
 
 ## Install User Programs
 
-# usql
-if [ ! -f "$HOME/.local/bin/usql" ]; then 
-    curl -Ls https://github.com/xo/usql/releases/download/v0.7.0/usql-0.7.0-linux-amd64.tar.bz2 | tar jvx
-    mv usql ~/.local/bin/
-fi
+# Google Chrome
+pacaur -S google-chrome --noconfirm --noedit
 
 # VSCode
 pacaur -S visual-studio-code-bin --noconfirm --needed --noedit
@@ -63,4 +53,4 @@ pacaur -S visual-studio-code-bin --noconfirm --needed --noedit
 pacaur -S deluge --noconfirm --needed --noedit
 
 # Install spotify
-pacaur -S spotify --noconfirm --needed --noedit
+# pacaur -S spotify --noconfirm --needed --noedit
