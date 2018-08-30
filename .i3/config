@@ -145,8 +145,8 @@ bindsym $super+Shift+0 move container to workspace $ws10
 # Binds Exec
 ##
 
-# start ranger (file manager)
-bindsym $super+r exec $term -e ranger
+# start Thunar (file manager)
+bindsym $super+r exec $term -e Thunar
 
 # start rofi (a program launcher)
 bindsym $super+Return exec "rofi -show-icons -modi combi -show combi -combi-modi drun -display-combi ''"
