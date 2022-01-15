@@ -89,3 +89,21 @@ rofi.color-window:      argb:ee010010, argb:ee010010, argb:ee010010
 rofi.color-normal:      argb:002f343f, #d8dee8, argb:002f343f, argb:002f343f, #43a5d5
 rofi.color-active:      #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
 rofi.color-urgent:      #2f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b
+
+!-------------------!
+!       xterm       !
+!-------------------!
+xterm*internalBorder: 20
+!jXTerm.vt100.foreground: white
+!XTerm.vt100.background: black
+XTerm.vt100.color0: rgb:28/28/28
+
+XTerm.termName: xterm-256color
+XTerm.vt100.geometry: 80x32
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.selectToClipboard: true
+XTerm.vt100.saveLines: 4096
+
+#include "/home/gn/.config/Xresources-themes/one-dark.Xresources"
